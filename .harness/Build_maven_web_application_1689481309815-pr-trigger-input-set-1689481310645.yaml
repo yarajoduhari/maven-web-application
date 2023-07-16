@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_maven_web_application_1689481309815-pr-trigger-input-set
+  identifier: Build_maven_web_application_1689481309815prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_maven_web_application_1689481309815
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
