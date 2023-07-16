@@ -18,14 +18,12 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: BuildAndPushDockerRegistry
-                  name: BuildAndPushDockerRegistry_1
-                  identifier: BuildAndPushDockerRegistry_1
+                  type: Run
+                  name: maven builds
+                  identifier: maven_builds
                   spec:
-                    connectorRef: dockerhub
-                    repo: yarajodudocker/mavenwebapp
-                    tags:
-                      - "1"
+                    shell: Sh
+                    command: git clone https://github.com/yarajoduhari/maven-web-application.git
           platform:
             os: Linux
             arch: Amd64
